@@ -4,6 +4,18 @@ A Flutter package that provides a modern, interactive floating context menu insp
 
 ---
 
+## Live Demo
+
+Live demo website: https://floating-context-menu-live-demo.netlify.app/
+
+---
+
+## Preview
+
+![Preview gif](https://raw.githubusercontent.com/TarLeeProject/floating_context_menu/refs/heads/main/example/preview.gif)
+
+---
+
 ## Features
 
 *   **Smooth Animations**: High-quality scale and transition animations using CurvedAnimation.
@@ -58,17 +70,17 @@ FloatingMenu(
     tag: 'unique_item_1', // Must be unique
     items: ['Edit', 'Share', 'Delete'],
     onSelected: (index) {
-    print('Selected item: $index');
+        print('Selected item: $index');
     },
     child: Container(
-    padding: EdgeInsets.all(16),
-    color: Colors.blue,
-    child: Text('Long press me'),
+        padding: EdgeInsets.all(16),
+        color: Colors.blue,
+        child: Text('Long press me'),
     ),
     expandedChild: Container(
-    padding: EdgeInsets.all(16),
-    color: Colors.blueAccent,
-    child: Text('I am expanded!'),
+        padding: EdgeInsets.all(16),
+        color: Colors.blueAccent,
+        child: Text('I am expanded!'),
     ),
 )
 ```
