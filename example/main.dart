@@ -27,18 +27,18 @@ class MyHomePage extends StatelessWidget {
         body: Center(
           child: GestureDetector(
             onTap: () {
-              ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                content: Text('Tapped on outside'),
-              ));
+              ScaffoldMessenger.of(
+                context,
+              ).showSnackBar(SnackBar(content: Text('Tapped on outside')));
             },
             child: FloatingMenu(
               tag: 'unique_tag',
               items: List.generate(5, (index) => 'Item$index'),
               onSelected: (index) {
                 WidgetsBinding.instance.addPostFrameCallback((_) {
-                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                    content: Text('Tapped on Item$index'),
-                  ));
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(content: Text('Tapped on Item$index')),
+                  );
                 });
               },
               expandedChild: Container(
@@ -59,21 +59,17 @@ class MyHomePage extends StatelessWidget {
                       Text('Block'),
                       GestureDetector(
                         onTap: () {
-                          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                            content: Text(
-                              'Tapped on gesture inside',
-                            ),
-                          ));
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(content: Text('Tapped on gesture inside')),
+                          );
                         },
                         child: Center(child: Text('Tappable')),
                       ),
                       FilledButton(
                         onPressed: () {
-                          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                            content: Text(
-                              'Tapped on button inside',
-                            ),
-                          ));
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(content: Text('Tapped on button inside')),
+                          );
                         },
                         child: Center(child: Text('Button')),
                       ),

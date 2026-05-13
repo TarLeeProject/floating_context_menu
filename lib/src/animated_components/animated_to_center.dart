@@ -57,8 +57,8 @@ class _AnimatedToCenterWidgetState extends State<AnimatedToCenterWidget> {
         _expandedOpacity = 1;
       });
       widget.showed?.call((
-      Offset(_left, _top),
-      Offset(_left + _width, _top + _height),
+        Offset(_left, _top),
+        Offset(_left + _width, _top + _height),
       ));
     });
 

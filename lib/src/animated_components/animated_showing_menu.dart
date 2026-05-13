@@ -169,16 +169,16 @@ class _AnimatedShowingMenuState extends State<AnimatedShowingMenu> {
                     children: widget.items
                         .map(
                           (title) => Container(
-                        key: _keys[widget.items.indexOf(title)],
-                        height: _menuItemHeight,
-                        color: widget.items.indexOf(title) == _selectedIndex
-                            ? Colors.black12
-                            : null,
-                        alignment: Alignment.centerLeft,
-                        padding: const EdgeInsets.symmetric(horizontal: 16),
-                        child: Text(title),
-                      ),
-                    )
+                            key: _keys[widget.items.indexOf(title)],
+                            height: _menuItemHeight,
+                            color: widget.items.indexOf(title) == _selectedIndex
+                                ? Colors.black12
+                                : null,
+                            alignment: Alignment.centerLeft,
+                            padding: const EdgeInsets.symmetric(horizontal: 16),
+                            child: Text(title),
+                          ),
+                        )
                         .toList(),
                   ),
                 ),
